@@ -1,0 +1,14 @@
+$p-color: grey;
+$cite-color: black;
+
+body {
+  font: 2rem Arial, sans-serif;
+}
+
+p {
+  color: $p-color;
+}
+
+cite {
+  color: $cite-color;
+}
