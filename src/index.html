@@ -7,104 +7,156 @@
   <title>Состав команд</title>
 </head>
 <body>
-  <main>
-    <aside class="venue">
-      <section class="venue__stadium">
-        <h2 class="subheading">
-          Стадион
-        </h2>
-        <article class="card arena">
-          <div class="flex-container">
-            <span class="arena__city">Москва</span>
-            <span class="arena__meteo">+5</span>
-          </div>
-          <h3 class="arena__name">
-            Стадион Динамо им. Льва Ивановича Яшина
-          </h3>
-          <div class="arena__capacity">
-            <span class="arena__spectators">
-              5000 чел.
-            </span>
-          </div>
-        </article>
-      </section>
-      <section class="venue__staff">
-        <h2 class="subheading">
-          Официальные лица
-        </h2>
-        <article class="card badge badge--main">
-          <p class="badge__role">
-            Главный судья
-          </p>
-          <h3 class="badge__name">
-            Пьер Луиджи <span class="linebreak">Коллина</span>
-          </h3>
-          <div class="flex-container">
-            <span class="badge__origin">Омск</span>
-            <span class="badge__skill">1 кат.</span>
-          </div>
-        </article>
-        <article class="card badge badge--assistant">
-          <p class="badge__role">
-            Первый ассистент судьи
-          </p>
-          <h3 class="badge__name">
-            Сергей <span class="linebreak">Лапочкин</span>
-          </h3>
-          <div class="flex-container">
-            <span class="badge__origin">Омск</span>
-            <span class="badge__skill">1 кат.</span>
-          </div>
-        </article>
-        <article class="card badge badge--assistant">
-          <p class="badge__role">
-            Второй ассистент судьи
-          </p>
-          <h3 class="badge__name">
-            Сергей <span class="linebreak">Карасев</span>
-          </h3>
-          <div class="flex-container">
-            <span class="badge__origin">Омск</span>
-            <span class="badge__skill">1 кат.</span>
-          </div>
-        </article>
-        <article class="card badge">
-          <p class="badge__role">
-            Резервный судья
-          </p>
-          <h3 class="badge__name">
-            Евгений <span class="linebreak">Белов</span>
-          </h3>
-          <div class="flex-container">
-            <span class="badge__origin">Омск</span>
-            <span class="badge__skill">1 кат.</span>
-          </div>
-        </article>
-        <article class="card badge">
-          <p class="badge__role">
-            Делегат матча
-          </p>
-          <h3 class="badge__name">
-            Василий <span class="linebreak">Седельников</span>
-          </h3>
-          <div class="flex-container">
-            <span class="badge__origin">Омск</span>
-          </div>
-        </article>
-        <article class="card badge badge--var">
-          <p class="badge__role badge__role--abbreviated">
-            <abbr title="Video assistant referee">Var</abbr>
-          </p>
-          <h3 class="badge__name">
-            Василий <span class="linebreak">Седельников</span>
-          </h3>
-          <div class="flex-container">
-            <span class="badge__origin">Омск</span>
-            <span class="badge__skill">1 кат.</span>
-          </div>
-        </article>
-      </section>
-    </aside>
+  <main class="teams">
+    <div class="wrapper">
+      <h1 class="heading">Составы команд</h1>
+      <div class="teams__container">
+        <nav class="teams__switch" aria-label="Team tabs">
+          <button
+            id="dinamo"
+            type="button"
+            class="teams__option teams__option--active">
+            <abbr class="uppercase" title="Футбольный клуб">
+              Фк
+            </abbr> Динамо Москва
+          </button>
+          <button
+            id="tver"
+            type="button"
+            class="teams__option">
+            <abbr class="uppercase" title="Футбольный клуб">
+              Фк
+            </abbr> Тверь
+          </button>
+        </nav>
+        <div class="teams__renderer" aria-live="polite">
+          <section class="teams__starters">
+            <h2 class="subheading">
+              Основной состав
+            </h2>
+            <ol
+              id="starters"
+              class="list">
+            </ol>
+          </section>
+          <section class="teams__subs">
+            <h2 class="subheading">
+              Запасные
+            </h2>
+            <ol
+              id="subs"
+              class="list">
+            </ol>
+          </section>
+          <section class="teams__coach">
+            <h2 class="subheading">
+              Тренерский штаб
+            </h2>
+            <ol
+              id="coach"
+              class="list">
+            </ol>
+          </section>
+        </div>
+      </div>
+      <aside class="venue">
+        <section class="venue__stadium">
+          <h2 class="subheading">
+            Стадион
+          </h2>
+          <article class="card arena">
+            <div class="flex-container">
+              <span class="arena__city">Москва</span>
+              <span class="arena__meteo">+5</span>
+            </div>
+            <h3 class="arena__name">
+              Стадион Динамо им. Льва Ивановича Яшина
+            </h3>
+            <div class="arena__capacity">
+              <span class="arena__spectators">
+                5000 чел.
+              </span>
+            </div>
+          </article>
+        </section>
+        <section class="venue__staff">
+          <h2 class="subheading">
+            Официальные лица
+          </h2>
+          <article class="card badge badge--main">
+            <p class="badge__role">
+              Главный судья
+            </p>
+            <h3 class="badge__name">
+              Пьер Луиджи <span class="linebreak">Коллина</span>
+            </h3>
+            <div class="flex-container">
+              <span class="badge__origin">Омск</span>
+              <span class="badge__skill">1 кат.</span>
+            </div>
+          </article>
+          <article class="card badge badge--assistant">
+            <p class="badge__role">
+              Первый ассистент судьи
+            </p>
+            <h3 class="badge__name">
+              Сергей <span class="linebreak">Лапочкин</span>
+            </h3>
+            <div class="flex-container">
+              <span class="badge__origin">Омск</span>
+              <span class="badge__skill">1 кат.</span>
+            </div>
+          </article>
+          <article class="card badge badge--assistant">
+            <p class="badge__role">
+              Второй ассистент судьи
+            </p>
+            <h3 class="badge__name">
+              Сергей <span class="linebreak">Карасев</span>
+            </h3>
+            <div class="flex-container">
+              <span class="badge__origin">Омск</span>
+              <span class="badge__skill">1 кат.</span>
+            </div>
+          </article>
+          <article class="card badge">
+            <p class="badge__role">
+              Резервный судья
+            </p>
+            <h3 class="badge__name">
+              Евгений <span class="linebreak">Белов</span>
+            </h3>
+            <div class="flex-container">
+              <span class="badge__origin">Омск</span>
+              <span class="badge__skill">1 кат.</span>
+            </div>
+          </article>
+          <article class="card badge">
+            <p class="badge__role">
+              Делегат матча
+            </p>
+            <h3 class="badge__name">
+              Василий <span class="linebreak">Седельников</span>
+            </h3>
+            <div class="flex-container">
+              <span class="badge__origin">Омск</span>
+            </div>
+          </article>
+          <article class="card badge badge--var">
+            <p class="badge__role">
+              <abbr class="uppercase" title="Video assistant referee">Var</abbr>
+            </p>
+            <h3 class="badge__name">
+              Василий <span class="linebreak">Седельников</span>
+            </h3>
+            <div class="flex-container">
+              <span class="badge__origin">Омск</span>
+              <span class="badge__skill">1 кат.</span>
+            </div>
+          </article>
+        </section>
+      </aside>
+    </div>
   </main>
 </body>
 </html>
