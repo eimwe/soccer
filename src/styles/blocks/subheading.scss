@@ -1,0 +1,8 @@
+@use '../global/variables' as *;
+
+.subheading {
+  font-size: $h2-font;
+  line-height: $h2-leading;
+  color: $color-h2;
+  text-transform: uppercase;
+}
