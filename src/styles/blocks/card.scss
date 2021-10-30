@@ -1,0 +1,9 @@
+@use '../global/variables' as *;
+
+.card {
+  padding-block: 1em;
+  padding-inline: 1.25em;
+  border: 1px solid $color-outline;
+  border-radius: $radius-lg;
+  background-color: $color-back;
+}

@@ -1,0 +1,53 @@
+@use '../global/variables' as *;
+@use 'card';
+@use '../helpers/mixins';
+
+.badge {
+  background-repeat: no-repeat;
+
+  &__role {
+    margin: 0;
+    font-size: $small-font;
+    font-weight: 700;
+    color: $color-h2;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-block: .625em;
+    font-size: $base-font;
+
+    .linebreak {
+      @include mixins.line-break;
+    }
+  }
+
+  &__origin {
+    font-size: $small-font;
+    color: $color-h2;
+  }
+
+  &__skill {
+    font-size: $small-font;
+    color: $color-skill;
+  }
+
+  &--main {
+    background-image: url('../images/whistle.svg');
+    background-position: 90% 35%;
+  }
+
+  &--assistant {
+    background-image: url('../images/flag.svg');
+    background-position: 100% 50%;
+  }
+
+  &--var {
+    background-image: url('../images/var.png');
+    background-position: 90% 35%;
+
+    .uppercase {
+      @include mixins.upper-case;
+    }
+  }
+}
