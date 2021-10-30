@@ -3,6 +3,8 @@
 .subheading {
   font-size: $h2-font;
   line-height: $h2-leading;
+  letter-spacing: 0.05em;
+  font-weight: 700;
   color: $color-h2;
   text-transform: uppercase;
 }

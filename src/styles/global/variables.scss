@@ -1,22 +1,21 @@
 /* Размеры шрифтов и высоты строк --> */
 /* Базовые */
 $base-font: 1rem;
-$base-leading: 1.75rem;
+$base-leading: 1.17;
 
 $small-font: .75rem;
-$small-leading: 1.25rem;
 
 /* Заголовки первого уровня */
-$h1-font: clamp(3rem, 5vw, 4.5rem);
-$h1-leading: clamp(2.5rem, 9vw, 8rem);
+$h1-font: clamp(2.25rem, 3vw, 2.625rem);
+$h1-leading: 1.4;
 
 /* Заголовки второго уровня */
-$h2-font: clamp(1.875rem, 2.25vw, 2rem);
-$h2-leading: auto;
+$h2-font: .875rem;
+$h2-leading: 1.4;
 
 /* Заголовки третьего уровня */
-$h3-font: clamp(1.25rem, 1.75vw, 1.5rem);
-$h3-leading: 2rem;
+$h3-font: 1rem;
+$h3-leading: 1.17;
 /* <-- */
 
 /* Цвета --> */
