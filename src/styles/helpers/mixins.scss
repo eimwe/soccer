@@ -1,0 +1,7 @@
+@mixin line-break {
+  display: block;
+}
+
+@mixin upper-case {
+  text-transform: uppercase;
+}
