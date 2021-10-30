@@ -1,0 +1,60 @@
+/* Размеры шрифтов и высоты строк --> */
+/* Базовые */
+$base-font: 1rem;
+$base-leading: 1.75rem;
+
+$small-font: .75rem;
+$small-leading: 1.25rem;
+
+/* Заголовки первого уровня */
+$h1-font: clamp(3rem, 5vw, 4.5rem);
+$h1-leading: clamp(2.5rem, 9vw, 8rem);
+
+/* Заголовки второго уровня */
+$h2-font: clamp(1.875rem, 2.25vw, 2rem);
+$h2-leading: auto;
+
+/* Заголовки третьего уровня */
+$h3-font: clamp(1.25rem, 1.75vw, 1.5rem);
+$h3-leading: 2rem;
+/* <-- */
+
+/* Цвета --> */
+/* Основные цвета для шрифтов */
+$color-font: #021b31;
+$color-h2: #c1c1c1;
+
+/* Для границ карточек */
+$color-outline: #ececec;
+
+/* Для класса '.badge__skill' у карточек в сайдбаре */
+$color-skill: #c4c4c4;
+
+/* Для фильтров в таблице игроков */
+$color-selected: #184272;
+$color-inactive: rgba(24, 66, 114, 0.5);
+$color-active: #0a8bff;
+$color-blur: radial-gradient(50.14% 92.5% at 49.86% 92.5%, rgba(10, 139, 255, 0.17) 0%, rgba(255, 255, 255, 0) 100%);
+
+/* Для строк в таблице*/
+$color-odd: #f8f8f8;
+
+/* Для таймкодов в таблице игроков */
+$color-timestamp: #525252;
+$color-yellow: #ffd600;
+$color-grey: #686868;
+$color-red: #d21845;
+
+/* Фоновые */
+$color-back: #fff;
+$color-body: linear-gradient(0deg, #F1F9FF, #F1F9FF), #FBFBFA;
+/* <-- */
+
+/* Бордер-радиусы --> */
+$radius-sm: 5px;
+$radius-lg: 10px;
+/* <-- */
+
+/* Длительность анимаций --> */
+$duration: 300ms;
+/* <-- */
