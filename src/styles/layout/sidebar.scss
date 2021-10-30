@@ -1,0 +1,22 @@
+.venue {
+  &__stadium {
+    margin-bottom: 2.25em;
+
+    .subheading {
+      margin: 0;
+      margin-bottom: 2em;
+    }
+  }
+
+  &__staff {
+
+    .subheading {
+      margin: 0;
+      margin-bottom: 1.5em;
+    }
+
+    .badge + .badge {
+      margin-top: 1.25em;
+    }
+  }
+}
