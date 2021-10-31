@@ -31,3 +31,10 @@ img {
 abbr[title] {
   text-decoration: none;
 }
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font: inherit;
+}

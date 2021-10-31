@@ -1,3 +1,4 @@
+@use './global/variables' as *;
 @use './global/global';
 @use './layout/layout';
 @use './blocks/heading';
@@ -5,3 +6,53 @@
 @use './layout/sidebar';
 @use './blocks/badge';
 @use './blocks/arena';
+
+.teams {
+  &__switch {
+    align-items: stretch;
+    padding: 1.125em 1.75em 0 1.75em;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__renderer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &__option {
+    flex-basis: 50%;
+    padding-bottom: 1.5em;
+    font-size: $small-font;
+    color: $color-inactive;
+    &::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 28px;
+      margin-inline: auto;
+      margin-bottom: .5em;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &#dinamo {
+      &::before {
+        background-image: url('../images/dinamo-logo.webp');
+      }
+    }
+
+    &#tver {
+      &::before {
+        background-image: url('../images/tver-logo.webp');
+      }
+    }
+
+    &--active {
+      color: $color-selected;
+      border-bottom: 2px solid $color-active;
+      background: $color-blur;
+    }
+  }
+}
