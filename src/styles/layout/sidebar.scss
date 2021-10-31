@@ -1,4 +1,6 @@
 .venue {
+  margin-block: 5.5em;
+
   &__stadium {
     margin-bottom: 2.25em;
 
@@ -13,10 +15,6 @@
     .subheading {
       margin: 0;
       margin-bottom: 1.5em;
-    }
-
-    .badge + .badge {
-      margin-top: 1.25em;
-    }
+    }  
   }
 }

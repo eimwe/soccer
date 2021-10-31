@@ -9,6 +9,9 @@
     margin: 0;
     font-size: $small-font;
     font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     color: $color-h2;
   }
 

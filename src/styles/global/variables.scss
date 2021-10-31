@@ -4,6 +4,7 @@ $base-font: 1rem;
 $base-leading: 1.17;
 
 $small-font: .75rem;
+$middle-font: .875rem;
 
 /* Заголовки первого уровня */
 $h1-font: clamp(2.25rem, 3vw, 2.625rem);
@@ -43,6 +44,7 @@ $color-red: #d21845;
 
 /* Фоновые */
 $color-back: #fff;
+$color-back-transparent: rgba(255, 255, 255, 0.5);
 $color-body: linear-gradient(0deg, #F1F9FF, #F1F9FF), #FBFBFA;
 /* <-- */
 
@@ -53,4 +55,13 @@ $radius-lg: 10px;
 
 /* Длительность анимаций --> */
 $duration: 300ms;
+/* <-- */
+
+/* Ширина центровщика .wrapper -->*/
+$wrapper-width: 90%;
+/* <-- */
+
+/* Переменные для .grid-container -->*/
+$grid-basis: 170px;
+$grid-gap: .5em;
 /* <-- */

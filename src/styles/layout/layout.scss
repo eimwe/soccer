@@ -1,5 +1,7 @@
+@use '../global/variables' as *;
+
 .wrapper {
-  width: 90%;
+  width: $wrapper-width;
   max-width: 1068px;
   margin-inline: auto;
 }
@@ -7,5 +9,12 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($grid-basis, 1fr));
+  gap: $grid-gap;
 }
