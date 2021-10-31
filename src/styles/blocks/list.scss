@@ -1,0 +1,20 @@
+@use '../global/variables' as *;
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &__item {
+    padding: .75em .625em;
+    border-radius: $radius-sm;
+
+    &:nth-child(odd) {
+      background-color: $color-odd;
+    }
+
+    &:nth-child(even) {
+      background-color: $color-back;
+    }
+  }
+}
