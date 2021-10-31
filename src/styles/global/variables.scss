@@ -4,7 +4,9 @@ $base-font: 1rem;
 $base-leading: 1.17;
 
 $small-font: .75rem;
+
 $middle-font: .875rem;
+$middle-leading: 1.75;
 
 /* Заголовки первого уровня */
 $h1-font: clamp(2.25rem, 3vw, 2.625rem);
@@ -49,8 +51,10 @@ $color-body: linear-gradient(0deg, #F1F9FF, #F1F9FF), #FBFBFA;
 /* <-- */
 
 /* Бордер-радиусы --> */
+$radius-xs: 2px;
 $radius-sm: 5px;
 $radius-lg: 10px;
+$radius-circle: 100px;
 /* <-- */
 
 /* Длительность анимаций --> */

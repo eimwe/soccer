@@ -56,4 +56,86 @@
       background: $color-blur;
     }
   }
+
+  &__teammate {
+    gap: 1.25em;
+    flex-wrap: nowrap;
+  }
+
+  &__number {
+    flex-basis: 6%;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  &__country {
+    flex-shrink: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-skill;
+    border-radius: $radius-circle;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--russia {
+      background-image: url('../images/russia.jpg');
+    }
+  }
+
+  &__name {
+    flex-basis: 30%;
+    margin: 0;
+    font-size: $base-font;
+  }
+
+  &__moments {
+    flex-basis: 12%;
+    flex-grow: 0;
+    font-size: $middle-font;
+    line-height: $middle-leading;
+    font-weight: 700;
+    color: $color-timestamp;
+  }
+
+  &__timestamp {
+    gap: .25em;
+  }
+
+  &__outcome {
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    font-size: 0;
+    border-radius: $radius-xs;
+
+    &--yellow-card {
+      background-color: $color-yellow;
+    }
+
+    &--red-card {
+      background-color: $color-red;
+    }
+
+    &--replacement {
+      width: 12px;
+      background-image: url('../images/recycle.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__role {
+    flex-basis: 12%;
+    text-align: center;
+
+    &:not(.teams__role--coach) {
+      text-transform: uppercase;
+    }
+
+    &--coach {
+      font-size: 0;
+    }
+  }
 }
