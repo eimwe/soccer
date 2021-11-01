@@ -125,6 +125,7 @@
   &__moments {
     flex-basis: 15%;
     flex-grow: 0;
+    justify-content: space-evenly;
     font-size: $middle-font;
     line-height: $middle-leading;
     font-weight: 700;
@@ -133,6 +134,7 @@
 
   &__timestamp {
     gap: .25em;
+    justify-content: center;
   }
 
   &__outcome {
@@ -170,4 +172,41 @@
       font-size: 0;
     }
   }
+}
+
+@media only screen and (min-width: $tablet)  {
+
+  .teams {
+    &__switch {
+      gap: 2.75em;
+    }
+
+    &__option {
+      flex-basis: 46%;
+      padding-bottom: .625em;
+      text-align: left;
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1em .5em 0;
+      }
+    }
+
+    &__name {
+      &::after {
+        padding-left: 1em;
+      }
+    }
+
+    &__moments {
+      flex-basis: 25%;
+    }
+
+    &__role {
+      &--coach {
+        font-size: $middle-font;
+      }
+    }
+  }
+
 }
