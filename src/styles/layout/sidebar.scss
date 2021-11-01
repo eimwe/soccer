@@ -1,20 +1,40 @@
+@use '../global/variables' as *;
+
 .venue {
   margin-top: 5.5em;
 
   &__stadium {
     margin-bottom: 2.25em;
+  }
 
-    .subheading {
-      margin: 0;
+  &__subheading {
+    margin: 0;
+
+    &--stadium {
       margin-bottom: 2em;
+    }
+
+    &--staff {
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-wide)  {
+
+  .venue {
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+
+    &__stadium {
+      margin-bottom: 0;
+      flex-basis: 26%;
+    }
+
+    &__staff {
+      flex-grow: 2;  
     }
   }
 
-  &__staff {
-
-    .subheading {
-      margin: 0;
-      margin-bottom: 1.5em;
-    }  
-  }
 }

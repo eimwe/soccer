@@ -11,13 +11,13 @@
 .teams {
   margin-block: 2em;
 
-  .heading {
+  &__heading {
     margin-top: 0;
     margin-bottom: .7em;
     margin-left: .25em;
   }
 
-  .subheading {
+  &__subheading {
     margin-top: 2em;
     margin-bottom: 1.285em;
     margin-left: .625em;
@@ -205,6 +205,24 @@
     &__role {
       &--coach {
         font-size: $middle-font;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: $tablet-wide)  {
+
+  .teams {
+    &__name {
+      &--coach {
+        flex-basis: 30%;
+      }
+    }
+
+    &__role {
+      &--coach {
+        flex-basis: 15%;
       }
     }
   }
