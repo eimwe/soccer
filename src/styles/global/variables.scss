@@ -12,6 +12,8 @@ $middle-leading: 1.75;
 $h1-font: clamp(2.25rem, 3vw, 2.625rem);
 $h1-leading: 1.4;
 
+$meteo-font: 2.25em;
+
 /* Заголовки второго уровня */
 $h2-font: .875rem;
 $h2-leading: 1.4;
@@ -68,7 +70,7 @@ $wrapper-width: 90%;
 /* Переменные для .grid-container -->*/
 $grid-basis: 170px;
 $grid-gap: .5em;
-$grid-gap-desktop: 1.375em;
+$grid-gap-desktop: 1.2em;
 /* <-- */
 
 /* Брейкпоинты для вьюпортов -->*/

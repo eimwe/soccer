@@ -1,21 +1,21 @@
 @use '../global/variables' as *;
 
 .venue {
-  margin-top: 3.25em;
+  margin-top: 3.5em;
 
   &__stadium {
-    margin-bottom: 2.25em;
+    margin-bottom: 1.5em;
   }
 
   &__subheading {
     margin: 0;
 
     &--stadium {
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
     }
 
     &--staff {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.25em;
     }
   }
 }
@@ -43,10 +43,10 @@
 
   .venue {
     display: block;
-    flex-basis: 22.6%;
+    flex-basis: 23%;
 
     &__stadium {
-      margin-bottom: 2.25em;
+      margin-bottom: 1.8em;
     }
   }
 
