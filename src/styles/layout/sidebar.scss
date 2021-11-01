@@ -1,7 +1,7 @@
 @use '../global/variables' as *;
 
 .venue {
-  margin-top: 5.5em;
+  margin-top: 3.25em;
 
   &__stadium {
     margin-bottom: 2.25em;
@@ -34,6 +34,19 @@
 
     &__staff {
       flex-grow: 2;  
+    }
+  }
+
+}
+
+@media only screen and (min-width: $desktop)  {
+
+  .venue {
+    display: block;
+    flex-basis: 22.6%;
+
+    &__stadium {
+      margin-bottom: 2.25em;
     }
   }
 

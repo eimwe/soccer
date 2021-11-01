@@ -79,7 +79,7 @@
 
   &__number {
     flex-basis: 5%;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
   }
 
@@ -223,6 +223,46 @@
     &__role {
       &--coach {
         flex-basis: 15%;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: $desktop)  {
+
+  .teams {
+    &__wrapper {
+      display: flex;
+      gap: 1.875em;
+      justify-content: space-between;
+    }
+
+    &__container {
+      flex-grow: 2;
+    }
+  }
+
+  .teams {
+    &__number {
+      flex-basis: 4%;
+    }
+
+    &__name {
+      flex-basis: 40%;
+
+      &--coach {
+        flex-basis: 32%;
+      }
+    }
+
+    &__moments {
+      flex-basis: 34.5%;
+    }
+
+    &__role {
+      &--coach {
+        flex-basis: 17%;
       }
     }
   }
