@@ -35,6 +35,7 @@
     padding-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    overflow: hidden;
   }
 
   &__option {
@@ -74,6 +75,19 @@
   &__teammate {
     gap: 1.25em;
     flex-wrap: nowrap;
+    animation: loadLiNode $duration linear;
+  }
+
+  @keyframes loadLiNode {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(.5);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   &__number {
@@ -178,6 +192,7 @@
   .teams {
     &__switch {
       gap: 2.75em;
+      flex-wrap: nowrap;
     }
 
     &__option {
