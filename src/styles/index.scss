@@ -114,6 +114,14 @@
     &--russia {
       background-image: url('../images/russia.jpg');
     }
+
+    &--armenia {
+      background-image: url('../images/armenia.webp');
+    }
+
+    &--sweden {
+      background-image: url('../images/sweden.webp');
+    }
   }
 
   &__name {
@@ -280,7 +288,7 @@
 
     &__role {
       &--coach {
-        flex-basis: 20%;
+        flex-basis: 23%;
         text-align: right;
       }
     }
