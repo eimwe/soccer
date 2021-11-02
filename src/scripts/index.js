@@ -128,6 +128,7 @@ const getPlayerMoments = (container, moments) => {
  * @description Клонирует темплейт,
  * добавляет нодам классы и принимает
  * деструктурированный массив объектов
+ * @see {@link renderPlayers} для вызова описываемой функции
  * @param {string} id - порядковый номер в списке игроков
  * @param {string} name - имя игрока
  * @param {string} country - страна игрока
@@ -200,6 +201,7 @@ const customizePlayerTemplate = (id,
  * переданного клона темплейта и деструктурированных данных массива игроков.
  * Созданные строки добавляет в элемент списка, передаваемый в виде параметра
  * playerList
+ * @see {@link renderPlayersByList} для вызова описываемой функции
  * @param {Object[]} team - массив объектов для отрисовки
  * @param {HTMLElement} playerList - контейнер для прикрепления
  * отрисованного списка
@@ -235,6 +237,26 @@ const renderPlayers = (team, playerList) => {
 
   playerList.appendChild(customizedPlayer);
 }
+
+/**
+ * @function
+ * @name renderPlayersByList
+ * @description Делегирует переданный массив на отрисовку
+ * и передает элемент списка функции renderPlayers
+ * @param {Object[]} team - массив объектов для отрисовки
+ * @param {HTMLElement} playerList - контейнер для прикрепления
+ * отрисованного списка
+ * @returns {undefined}
+ */
+const renderPlayersByList = (team, playerList) => {
+  
+    team.forEach((team) => {
+        /**
+         * Данная функция описана в @see {@link renderPlayers}
+         */
+        renderPlayers(team, playerList);
+    });
+  }
 
 function changeClub() {
   let filterButtons = document.querySelectorAll('.teams__option');
