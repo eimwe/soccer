@@ -9,6 +9,10 @@ const TVER_REGULARS = TVER_STARTERS;
 const TVER_RESERVE = TVER_BACKUP;
 const TVER_COACHES = TVER_MENTORS;
 
+let regularList = document.getElementById('starters'),
+    reserveList = document.getElementById('subs'),
+    coachList = document.getElementById('coach');
+
 /**
  * @function
  * @name getPlayerRole
@@ -283,15 +287,44 @@ const renderPlayersByList = (team, playerList) => {
   });
 }
 
-function changeClub() {
+/**
+ * @function
+ * @name changeClub
+ * @description Добавляет обработчик сообытия (click)
+ * на кнопки переключения между клубами. В зависимости от кнопки,
+ * зарегистрировавшей событие, передает массив с данными для отрисовки
+ * и список, куда следует прикрепить отрисованные элементы
+ * функции renderPlayersByList.
+ * Также отвечает за переключение активного класса у кнопок
+ * @returns {undefined}
+ */
+const changeClub = () => {
+
   let filterButtons = document.querySelectorAll('.teams__option');
 
   filterButtons?.forEach(button => {
 
     button.addEventListener('click', event => {
-      let clickedButton = event.target;
-      let activeButton = document.querySelector('.teams__option--active');
-
+      let clickedButton = event.target,
+          playerTeam = clickedButton.id,
+          activeButton = document.querySelector('.teams__option--active');
+  
+    /**
+     * Функция в блоке switch описана в @see {@link renderPlayersByList}
+     */
+      switch (playerTeam) {
+        case 'dinamo':
+          renderPlayersByList(DINAMO_REGULARS, regularList);
+          renderPlayersByList(DINAMO_RESERVE, reserveList);
+          renderPlayersByList(DINAMO_COACHES, coachList);
+            break;
+        case 'tver':
+          renderPlayersByList(TVER_REGULARS, regularList);
+          renderPlayersByList(TVER_RESERVE, reserveList);
+          renderPlayersByList(TVER_COACHES, coachList);
+            break;
+      }
+  
       if (clickedButton !== activeButton) {
         clickedButton.classList.add('teams__option--active');
         activeButton?.classList.remove('teams__option--active');
@@ -302,3 +335,7 @@ function changeClub() {
 }
 
 changeClub();
+
+renderPlayersByList(DINAMO_REGULARS, regularList);
+renderPlayersByList(DINAMO_RESERVE, reserveList);
+renderPlayersByList(DINAMO_COACHES, coachList);
