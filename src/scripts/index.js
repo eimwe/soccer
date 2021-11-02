@@ -193,6 +193,49 @@ const customizePlayerTemplate = (id,
   return player;
 };
 
+/**
+ * @function
+ * @name renderPlayers
+ * @description Отрисовывает строки с игроками на основе
+ * переданного клона темплейта и деструктурированных данных массива игроков.
+ * Созданные строки добавляет в элемент списка, передаваемый в виде параметра
+ * playerList
+ * @param {Object[]} team - массив объектов для отрисовки
+ * @param {HTMLElement} playerList - контейнер для прикрепления
+ * отрисованного списка
+ * @returns {undefined}
+ */
+
+const renderPlayers = (team, playerList) => {
+  const {
+    id = '1',
+    name = 'Игрок',
+    country = 'oops!',
+    isCaptain = false,
+    isMidField = false,
+    isCoach = false,
+    role = Нап,
+    roleDesc = Нападающий,
+    moments = [],
+  } = team;
+  
+  /**
+   * Данная функция описана в @see {@link customizePlayerTemplate}
+   */
+  let customizedPlayer = customizePlayerTemplate(
+      id, 
+      name, 
+      country, 
+      isCaptain, 
+      isMidField, 
+      isCoach, 
+      role, 
+      roleDesc, 
+      moments);
+
+  playerList.appendChild(customizedPlayer);
+}
+
 function changeClub() {
   let filterButtons = document.querySelectorAll('.teams__option');
 
