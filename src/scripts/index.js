@@ -240,6 +240,27 @@ const renderPlayers = (team, playerList) => {
 
 /**
  * @function
+ * @name cleanPlayerList
+ * @description Очищает контейнер playerList от всех нод
+ * перед очередной отрисовкой списка игроков
+ * @see {@link renderPlayersByList} для вызова описываемой функции
+ * @param {HTMLElement} playerList - контейнер для очистки от нод
+ * @returns {Boolean}
+ */
+const cleanPlayerList = (playerList) => {
+  if (playerList.hasChildNodes) {
+      while (playerList.firstChild) {
+          playerList.removeChild(playerList.firstChild);
+      }
+  } else {
+      return false;
+  }
+
+  return true;
+}
+
+/**
+ * @function
  * @name renderPlayersByList
  * @description Делегирует переданный массив на отрисовку
  * и передает элемент списка функции renderPlayers
@@ -249,14 +270,18 @@ const renderPlayers = (team, playerList) => {
  * @returns {undefined}
  */
 const renderPlayersByList = (team, playerList) => {
-  
-    team.forEach((team) => {
-        /**
-         * Данная функция описана в @see {@link renderPlayers}
-         */
-        renderPlayers(team, playerList);
-    });
-  }
+  /**
+   * Данная функция описана в @see {@link cleanPlayerList}
+   */
+  cleanPlayerList(playerList);
+
+  team.forEach((team) => {
+    /**
+     * Данная функция описана в @see {@link renderPlayers}
+     */
+    renderPlayers(team, playerList);
+  });
+}
 
 function changeClub() {
   let filterButtons = document.querySelectorAll('.teams__option');
