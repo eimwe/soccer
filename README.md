@@ -1,22 +1,18 @@
-# Test
+# 2Dit Jr. Frontend Test
 
 ## Technology stack
 
-- HTML
-- SASS
-- JavaScript
+- HTML 5
+- Dart SASS
+- PostCSS
+- JavaScript ES6
+- Webpack 5
 
-## Test environment
+## Инструкция по сборке проекта
 
-- Google Chrome 90.0.4430.93
-- Firefox 88.0.1
-- Microsoft Edge 90.0.818.51
-
-## Usage instructions
-
-1. Clone the repository
-2. Run `npm i` to install dependencies
-3. Run one of the following commands:
+1. Склонировать репозиторий
+2. Выполнить команду `npm i` для установки зависимостей
+3. Выполнить одну из следующих команд:
 
 ### Production Build
 
@@ -35,6 +31,10 @@ npm run build-dev
 ```
 npm start
 ```
+
+## Attributions
+1. Макет тестового задания сверстан командой [2Dit](https://github.com/studio2dit);
+2. Файл `normalize.css` создан автором [Nicolas Gallagher](http://nicolasgallagher.com/) и распространяется для всех желающих по ссылке: [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/).
 
 ## License
 
