@@ -39,6 +39,23 @@ const getPlayerRole = (container, role, roleDesc, isCoach) => {
 
 /**
  * @function
+ * @name convertTimestamp
+ * @description Преобразует минуты в формат Ч:M
+ * для корректного отображения в атрибуте datetime
+ * элемента <time>
+ * @see {@link getPlayerMoments} для вызова описываемой функции
+ * @param {string} mins 
+ * @returns {string}
+ */
+const convertTimestamp = (mins) => {
+    let h = Math.floor(mins / 60);
+    let m = mins % 60;
+
+    return `PT${h}H${m}M`;
+}
+
+/**
+ * @function
  * @name getPlayerMoments
  * @description Создает ноды с событиями матча для каждого игрока.
  * Если событий не было, создает специальную ноду messageNode
@@ -69,7 +86,10 @@ const getPlayerMoments = (container, moments) => {
       if (key === 'timestamp') {
         let timeNode = document.createElement('TIME');
         let textNode = document.createTextNode(`${value}'`);
-        timeNode.setAttribute('datetime', value);
+        /**
+         * Данная функция описана в @see {@link convertTimestamp}
+         */
+        timeNode.setAttribute('datetime', convertTimestamp(value) );
         timeNode.appendChild(textNode);
         divNode.appendChild(timeNode);
       }
