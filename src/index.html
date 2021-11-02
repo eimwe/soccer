@@ -37,54 +37,6 @@
             <ol
               id="starters"
               class="list">
-              <li class="list__item flex-container teams__teammate">
-                <span class="teams__number">1</span>
-                <span class="teams__country teams__country--russia">Россия</span>
-                <h3 class="teams__name teams__name--captain">
-                  Юрий Гагарин
-                </h3>
-                <div class="teams__moments flex-container">
-                  <span class="teams__timestamp flex-container">
-                    <time datetime="PT1H23M">83'</time>
-                    <span class="teams__outcome teams__outcome--yellow-card">
-                      Предупреждение
-                    </span>
-                  </span>
-                  <span class="teams__timestamp flex-container">
-                    <time datetime="PT1H23M">83'</time>
-                    <span class="teams__outcome teams__outcome--red-card">
-                      Удаление с поля
-                    </span>
-                  </span>
-                  <span class="teams__timestamp flex-container">
-                    <time datetime="PT1H23M">83'</time>
-                    <span class="teams__outcome teams__outcome--replacement">
-                      Замена
-                    </span>
-                  </span>
-                </div>
-                <span class="teams__role">
-                  <abbr title="Нападающий">Нап</abbr>
-                </span>
-              </li>
-              <li class="list__item flex-container teams__teammate">
-                <span class="teams__number">2</span>
-                <span class="teams__country teams__country--russia">Россия</span>
-                <h3 class="teams__name">
-                  Станислав Черчесов
-                </h3>
-                <div class="teams__moments flex-container">
-                  <span class="teams__timestamp flex-container">
-                    <time datetime="PT1H23M">83'</time>
-                    <span class="teams__outcome teams__outcome--replacement">
-                      Замена
-                    </span>
-                  </span>
-                </div>
-                <span class="teams__role">
-                  <abbr title="Вратарь">Врт</abbr>
-                </span>
-              </li>
             </ol>
           </section>
           <section class="teams__subs">
@@ -94,30 +46,6 @@
             <ol
               id="subs"
               class="list">
-              <li class="list__item flex-container teams__teammate">
-                <span class="teams__number">3</span>
-                <span class="teams__country teams__country--russia">Россия</span>
-                <h3 class="teams__name teams__name--midfielder">
-                  Магомед Шапи-Сулейманов
-                </h3>
-                <div class="teams__moments flex-container">
-                  <span class="teams__timestamp flex-container">
-                    <time datetime="PT1H23M">83'</time>
-                    <span class="teams__outcome teams__outcome--yellow-card">
-                      Предупреждение
-                    </span>
-                  </span>
-                  <span class="teams__timestamp flex-container">
-                    <time datetime="PT1H23M">83'</time>
-                    <span class="teams__outcome teams__outcome--red-card">
-                      Удаление с поля
-                    </span>
-                  </span>
-                </div>
-                <span class="teams__role">
-                  <abbr title="Полузащитник">Пз</abbr>
-                </span>
-              </li>
             </ol>
           </section>
           <section class="teams__coach">
@@ -127,21 +55,18 @@
             <ol
               id="coach"
               class="list">
-              <li class="list__item flex-container teams__teammate">
-                <span class="teams__number">Гт</span>
-                <span class="teams__country teams__country--russia">Россия</span>
-                <h3 class="teams__name teams__name--coach">
-                  Константин Бесков
-                </h3>
-                <div class="teams__moments flex-container">
-                  <span class="visually-hidden">Не отличился</span>
-                </div>
-                <span class="teams__role teams__role--coach">
-                  Главный тренер
-                </span>
-              </li>
             </ol>
           </section>
+          <template id="player">
+            <li class="list__item flex-container teams__teammate">
+              <span class="teams__number"></span>
+              <span class="teams__country"></span>
+              <h3 class="teams__name"></h3>
+              <div class="teams__moments flex-container">
+              </div>
+              <span class="teams__role"></span>
+            </li>
+          </template>
         </div>
       </div>
       <aside class="venue">
