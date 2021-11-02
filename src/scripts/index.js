@@ -11,6 +11,34 @@ const TVER_COACHES = TVER_MENTORS;
 
 /**
  * @function
+ * @name getPlayerRole
+ * @description Создает ноду abbreviationNode,
+ * добавляет в эту ноду текстовый узел с аббревиатурой
+ * и расшифровкой роли игрока.
+ * @see {@link customizePlayerTemplate} для вызова описываемой функции
+ * @param {HTMLElement} container - playerRole -->
+ * контейнер, куда прикрепляется созданная этой функцией нода
+ * @param {string} role - аббревиатура роли игрока в команде
+ * @param {string} roleDesc - расшифровка аббревиатуры роли игрока в команде 
+ * @param {Boolean} isCoach - тренер (true|false)
+ * @returns {undefined}
+ */
+const getPlayerRole = (container, role, roleDesc, isCoach) => {
+  let abbreviationNode = document.createElement('ABBR'),
+      abbreviationText = document.createTextNode(role);    
+  
+  if (isCoach) {
+    container.classList.add('teams__role--coach');
+    container.appendChild(abbreviationText);
+  } else {
+    abbreviationNode.appendChild(abbreviationText);
+    abbreviationNode.setAttribute('title', roleDesc);
+    container.appendChild(abbreviationNode);
+  }
+}
+
+/**
+ * @function
  * @name customizePlayerTemplate
  * @description Клонирует темплейт,
  * добавляет нодам классы и принимает
@@ -66,6 +94,11 @@ const customizePlayerTemplate = (id,
   if (isMidField) {
     playerName?.classList.add('teams__name--midfielder');
   }
+
+  /**
+   * Данная функция описана в @see {@link getPlayerRole}
+   */
+  getPlayerRole(playerRole, role, roleDesc, isCoach);
 
   return player;
 };
